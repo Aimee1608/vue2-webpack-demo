@@ -13,7 +13,7 @@ export default {
   components: {
     HelloWorld
   },
-  created() {
+  created () {
     console.log('create')
   }
 }

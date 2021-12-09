@@ -63,9 +63,14 @@
       "@commitlint/config-conventional"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write",
-    "*.{js,vue}": "eslint --cache --fix"
+    "*.{js,css,md}": "prettier --write"
   }
 }
